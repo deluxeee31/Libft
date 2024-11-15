@@ -49,14 +49,12 @@ BONUS = ft_lstnew.c \
 BONUS_OBJS = $(BONUS:.c=.o)
 OBJ = $(FILES:.c=.o)
 
-HEADERS = libft.h
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c $(HEAD)
+%.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(OBJ) $(BONUS_OBJS)
